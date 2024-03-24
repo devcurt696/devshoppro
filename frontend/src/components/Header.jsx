@@ -30,12 +30,12 @@ const Header = () => {
   
   return (
     <header>
-        <Navbar bg='dark' variant='dark' expand="lg" collapseOnSelect>
+        <Navbar bg='primary' data-bs-theme="primary" expand="lg" collapseOnSelect>
             <Container>
                 <LinkContainer to='/'>
-                <Navbar.Brand>
+                <Navbar.Brand className='text-white'>
                   <img src={logo} alt="logo" />
-                  ProShop  
+                  DevShopPro  
                 </Navbar.Brand>
                 </LinkContainer>
                 <Navbar.Toggle aria-controls='basic-navbar-nav' />
