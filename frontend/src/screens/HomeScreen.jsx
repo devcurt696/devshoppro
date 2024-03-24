@@ -23,7 +23,7 @@ const HomeScreen = () => {
           </Message>
         ) : (
           <>
-          <Meta title='Home' />
+          <Meta title='DSP - Home' />
           <h1>Latest Products</h1>
           <Row>
               {data.products.map((product) => (

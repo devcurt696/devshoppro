@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { saveShippingAddress } from "../slices/cartSlice";
 import FormContainer from "../components/FormContainer";
 import CheckoutSteps  from "../components/CheckoutSteps";
+import Meta from "../components/Meta";
 
 const ShippingScreen = () => {
   const cart = useSelector((state) => state.cart);
@@ -27,6 +28,7 @@ const ShippingScreen = () => {
   }
   return (
     <FormContainer>
+      <Meta title="Shipping" />
       <CheckoutSteps step1 step2 />
       <h1>Shipping</h1>
 

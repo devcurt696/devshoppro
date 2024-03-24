@@ -32,10 +32,10 @@ const Header = () => {
   
   return (
     <header>
-        <Navbar bg='primary' data-bs-theme="primary" expand="lg" collapseOnSelect>
+        <Navbar bg='light' data-bs-theme="light" expand="lg" collapseOnSelect>
             <Container>
                 <LinkContainer to='/'>
-                <Navbar.Brand className='text-white'>
+                <Navbar.Brand>
                   <img src={logo} alt="logo" />
                   DevShop.pro  
                 </Navbar.Brand>
@@ -59,9 +59,10 @@ const Header = () => {
                       <NavDropdown
                         title={userInfo.name}
                         id='username'
+                        className="text-white"
                       >
                         <LinkContainer to='/profile'>
-                          <NavDropdown.Item>Profile</NavDropdown.Item>
+                          <NavDropdown.Item >Profile</NavDropdown.Item>
                         </LinkContainer>
                         <NavDropdown.Item onClick={logoutHandler}>
                           Logout

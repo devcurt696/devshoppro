@@ -6,7 +6,7 @@ import Loader from "../../components/Loader"
 import FormContainer from "../../components/FormContainer"
 import { toast } from "react-toastify"
 import { useUpdateProductMutation, useGetProductDetailsQuery, useUploadProductImageMutation } from "../../slices/productsApiSlice"
-
+import Meta from "../../components/Meta";
 
 const ProductEditScreen = () => {
     const { id: productId } = useParams();
@@ -75,6 +75,7 @@ const ProductEditScreen = () => {
  
   return (
     <>
+        <Meta title='Edit Product' />
         <Link to="/admin/productList" className="btn btn-light my-3">
             Go Back
         </Link>

@@ -7,6 +7,7 @@ import Message from '../components/Message';
 import Loader from '../components/Loader';
 import { useGetOrderDetailsQuery, usePayOrderMutation, useGetPayPalClientIdQuery, useDeliverOrderMutation } from '../slices/ordersApiSlice';
 import { toast } from 'react-toastify';
+import Meta from '../components/Meta';
 
 const OrderScreen = () => {
     const { id: orderId } = useParams();
@@ -88,6 +89,7 @@ const OrderScreen = () => {
 
   return isLoading ? <Loader /> : error ? <Message variant='danger'>{error?.data?.message || error.error}</Message> : (
     <>
+        <Meta title={`Order ${order._id}`} />
         <h1>Order {order._id}</h1>
         <Row>
             <Col md={8}>
